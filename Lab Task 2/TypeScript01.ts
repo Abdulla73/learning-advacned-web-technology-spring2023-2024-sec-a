@@ -1,3 +1,4 @@
+
 let a:number =10;
 let b:string ="Hello";
 let c:boolean =true;
@@ -97,3 +98,55 @@ class employe{
 }
 let emp1= new employe(1,"Alvi");
 emp1.display();
+
+class employe1{
+    private id:number;
+    private name:string;
+    protected age:number;
+    public isOkey:boolean;
+    constructor(id:number,name:string,age:number,isOkey:boolean){
+        this.id=id;
+        this.name=name;
+        this.age=age;
+        this.isOkey=isOkey;
+    }
+
+    display():void{
+        console.log(`id=${this.id},name=${this.name},age=${this.age},isOkey=${this.isOkey}`);
+    }
+}
+
+let emp2 =new employe1(1,"steve",21,false);
+emp2.display();
+
+function display<T>(id:T,name:T):void{
+    console.log(`id=${id},name=${name}`);
+}
+
+display<number | string>(101, "steve");
+display<string>("102", "bill");
+
+interface IEmploye{
+    id:number;
+    name:string;
+    display():void;
+}
+
+class employe6  implements IEmploye{
+    id: number;
+    name: string;
+    constructor(id:number,name:string){
+        this.id=id;
+        this.name=name;
+    }
+
+    display(): void {
+        console.log(`id=${this.id},name=${this.name}`);
+    }
+}
+
+let emp6 =new employe6(1,"steve");
+emp6.display();
+
+
+

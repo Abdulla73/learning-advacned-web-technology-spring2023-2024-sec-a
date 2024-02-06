@@ -83,3 +83,34 @@ var employe = /** @class */ (function () {
 }());
 var emp1 = new employe(1, "Alvi");
 emp1.display();
+var employe1 = /** @class */ (function () {
+    function employe1(id, name, age, isOkey) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.isOkey = isOkey;
+    }
+    employe1.prototype.display = function () {
+        console.log("id=".concat(this.id, ",name=").concat(this.name, ",age=").concat(this.age, ",isOkey=").concat(this.isOkey));
+    };
+    return employe1;
+}());
+var emp2 = new employe1(1, "steve", 21, false);
+emp2.display();
+function display(id, name) {
+    console.log("id=".concat(id, ",name=").concat(name));
+}
+display(101, "steve");
+display("102", "bill");
+var employe6 = /** @class */ (function () {
+    function employe6(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    employe6.prototype.display = function () {
+        console.log("id=".concat(this.id, ",name=").concat(this.name));
+    };
+    return employe6;
+}());
+var emp6 = new employe6(1, "steve");
+emp6.display();
